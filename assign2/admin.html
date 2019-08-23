@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title>Taxi Booking System</title>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<div class="overlay-image">
+			<img src="https://i.imgur.com/rKOVEt6.png" class="img-fluid" alt="Responsive image"/>
+			<!-- <img src="./Images/TitlePage.png" class="img-fluid" alt="Responsive image"/> -->
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		 	<a class="navbar-brand" href="#">Navigation</a>
+		 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Navigation Buttons -->
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="booking.html">Booking</a>
+					<a class="nav-item nav-link active" href="admin.html">Admin<span class="sr-only">(current)</span></a>
+		    	</div>
+		  	</div>
+		</nav><br><br>
+
+		<!-- Page Content -->
+		<div class="fluid-container px-lg-5" id="addForMobile">
+         <div class="row" id="addForDesktop">
+            <!-- Button and search bar -->
+            <div class="col col-md-4">
+               <!-- Show all unassigned button -->
+					<label class="input-group mb-2 col-md-12" for="showUnassigned">Display all unassigned bookings within the next two hours: <br></label>
+               <div class="input-group mb-3 col-md-12">
+                  <button class="btn btn-outline-primary" type="button" id="showUnassigned" onClick="runXHRConnection('view','0')">Display Bookings</button>
+               </div>
+               <!-- Assign a given ID button -->
+               <div class="input-group mb-3 col-md-12">
+                  <div class="input-group-prepend">
+                     <button class="btn btn-outline-primary" type="button" id="assignButton" onClick="validateBookingId()">Assign</button>
+                  </div>
+                  <input type="text" class="form-control" id="bookingIdValidate" placeholder="BookingID: " aria-describedby="assignButton">
+               </div>
+               <!-- Current time -->
+               <div class="input-group mb-3 col-md-12">
+                  <div class="input-group-prepend">
+                     <div class="input-group-text">Current Time</div>
+                  </div>
+                  <input type="datetime-local" class="form-control" id="date" onload="runLoop()" readonly>
+               </div>
+               <!-- Error output -->
+					<div class="input-group mb-3 col-md-12">
+	               <div class="input-group mb-3" id="errorOutPut" style="color: red;">
+
+	               </div>
+					</div>
+            </div>
+            <!-- Output -->
+            <div class="fluid-col col-md-8" id="adminOutPut">
+
+            </div>
+         </div>
+		</div>
+
+      <script src="Javascript/xhr.js"></script>
+      <script src="Javascript/adminFunctions.js"></script>
+      <script src="Javascript/createTable.js"></script>
+      <script src="Javascript/scaling.js"></script>
+      <script src="Javascript/dateFunction.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

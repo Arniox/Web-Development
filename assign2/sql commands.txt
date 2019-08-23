@@ -1,0 +1,14 @@
+CREATE TABLE Taxi_Booking_Service(
+	BookingID INT PRIMARY KEY AUTO_INCREMENT,
+	CustomerName VARCHAR(100) NOT NULL,
+	CustomerNumber INT(13) NOT NULL,
+	PickupAddress VARCHAR(200) NOT NULL,
+	DestinationAddress VARCHAR(200) NOT NULL,
+	DateTimeOfRide DATETIME NOT NULL,
+	RegistrationTime DATETIME NOT NULL,
+	Status enum('assigned','unassigned') DEFAULT 'unassigned' NOT NULL
+);
+
+ALTER TABLE `Taxi_Booking_Service` ADD INDEX `taxi_booking_service_idx_status_datetimeofride` (`Status`,`DateTimeOfRide`);
+
+SET time_zone = '+12:00'

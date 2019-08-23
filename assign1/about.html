@@ -1,0 +1,161 @@
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title>About</title>
+	</head>
+	<body>
+
+		<!-- Navigation bar -->
+		<div class="overlay-image">
+			<img src="https://i.gyazo.com/2b3f17f140e933fd374b0597aa352921.jpg" class="img-fluid" alt="Responsive image">
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		 	<a class="navbar-brand" href="#">Navigation</a>
+		 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="index.html">Home</a>
+					<a class="nav-item nav-link" href="poststatusform.php">Post a New Status</a>
+					<a class="nav-item nav-link" href="searchstatusform.html">Search Status'</a>
+					<a class="nav-item nav-link active" href="#">About this Assignment<span class="sr-only">(current)</span></a>
+		    	</div>
+		  	</div>
+		</nav><br><br>
+		<!-- Page Content -->
+		<div class="container-fluid px-lg-5">
+			<div class="row">
+				<div class="col-4">
+					<div class="list-group" id="list-tab" role="tablist">
+				    	<a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-features" role="tab" aria-controls="home">What Special Features are there:</a>
+				    	<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-issues" role="tab" aria-controls="profile">Troubles and issues I had:</a>
+				    	<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-better-nexttime" role="tab" aria-controls="messages">What would I try to do better next time:</a>
+				    	<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-learning" role="tab" aria-controls="settings">What have I learnt along the way:</a>
+				    	<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-refrences" role="tab" aria-controls="settings">What refrences/sources where used:</a>
+				    </div>
+				</div>
+			    <div class="col-8">
+					<div class="tab-content" id="nav-tabContent">
+				    	<div class="tab-pane fade" id="list-features" role="tabpanel" aria-labelledby="list-home-list">
+				    		Alot of my special features are more style based rather than functionality, but I have a few functional special features as well.
+				    		<ul>
+				    			<li>
+				    				My biggest special feature is that I'm using bootstrap CSS styling for everything on my whole website. From buttons, to radio buttons to text fields and so on. This is generally for a much cleaner nicer looking website with a more modern approach
+				    			</li>
+				    			<li>
+				    				In my post status form, I put a lot of work into making the validation occure INSIDE the post status form and then the validated data being sent to the post status process where it's further validated by checking to see if it already exists in the database and so on.<br>
+				    				This means I can get really nice dynamic CSS styling inside my post status form with PHP validation. I wanted to make sure this worked because I personally think it looks way better than a seperate error message
+				    			</li>
+				    			<li>
+				    				I also wanted a really nice layout to the search status form so I went with a card like layout which looks very nice
+				    			</li>
+				    			<li>
+				    				The navigation bar is another nice feature I decided to add
+				    			</li>
+				    		</ul>
+				    	</div>
+
+				    	<div class="tab-pane fade" id="list-issues" role="tabpanel" aria-labelledby="list-profile-list">
+				    		I didn't have many issues during the first few parts of the website. Just simple stuff with styling. These are all issues I faced after that starting period:
+				    		<ul>
+				    			<li>
+				    				My biggest issue of all had to do with how bad PHP is. For some damn reason if I defined a pattern such as my status code pattern <i>outside</i> of the check status code function; the function would not recognise the regular expression.<br> I had to define the regular expression inside each check function and then it finally worked. I spent over 2 days on this issue and was about to give up and wait to ask the teacher but I eventually figured it out through testing and sheer luck.
+				    			</li>
+				    			<li>
+				    				One of my other really big issues was the SQL intergration. I ended up with some simple bugs but they kept me busy and trying to fix them for a long time. One of the <i>bugs</i> I had was that I was generating a query, but I wasn't running it and getting any results -_-<br>Things like this slowed my progression down a lot because I often had to wait till the labs to ask some friends what I was doing wrong
+				    			</li>
+				    			<li>
+				    				Another big issue I had was posting or linking to another php document from the current php document <i>without</i> using the html form. I was trying to just use php but in the end I abonded the idea and decided to do a an automatic submission once the values where all validated using javascript. Once all the values are submitted, javascript is inserted into the page which then automatical re-submits the document. On the user side they don't notice anything.
+				    			</li>
+				    			<li>
+				    				Another big issue I had; mostly occuring on the search status process php document, was scaling with bootstrap. Bootstrap is kinda hard to use since there is <b>so</b> many different classes you can use to style something. I tried to keep a consistent styling theme going across all my documents but doing that was really hard due to each page having slightly different styling.
+				    			</li>
+				    			<li>
+				    				Another really big issue I had which was entirely not my fault, was that for some reason, whenever I would work from home and use remote desktop to drag and drop files from my home computer into <i>WinSCP</i> it would sometimes not update at all. I would literally be able to delete all the files for my entire assignement off of <i>WinSCP</i> and it would somehow still be able to work in my browser. In order to fix this I had to completely log off and restart the entire remote connection and then delete the entire assignement folder off of the remote desktop and <i>WinSCP</i> and then recopy it from my comuter to the remote desktop and <i>WinSCP</i>. It was extreemely tedious and insanely annoying but I finally got it working.
+				    			</li>
+				    		</ul>
+				    	</div>
+
+				    	<div class="tab-pane fade" id="list-better-nexttime" role="tabpanel" aria-labelledby="list-messages-list">
+				    		<ul>
+				    			<li>
+				    				I think one of the biggest things I would do next time is not spend so much time on styling. I effectively waited until the last week before working on the majority of the functionality because I wanted the website to look really nice.
+				    			</li>
+				    			<li>
+				    				I would also probably keep it simple and not try to do multiple submits inside 1 php form like I did in the post status form.
+				    			</li>
+				    		</ul>
+				    	</div>
+
+				    	<div class="tab-pane fade" id="list-learning" role="tabpanel" aria-labelledby="list-settings-list">
+				    		<ul>
+				    			<li>
+				    				I have learnt a hell of a lot about PHP and the way it interacts with HTML and SQL and my conclusion is that: PHP sucks massive ***. I much prefer the modularity and accessability that javascript offers. However I can see the usefulness in PHP and the way it's entierly server based and the data or functions or anything that might be a security risk can be hidden with PHP functions
+				    			</li>
+				    			<li>
+				    				I have learnt about how easy it is in general to work with SQL from a website. I've always wanted to learn more web programming but I have never been able to use a database but not it's alot easier with this experience.
+				    			</li>
+				    		</ul>
+				    	</div>
+
+				    	<div class="tab-pane fade" id="list-refrences" role="tabpanel" aria-labelledby="list-settings-list">
+				    		<ul>
+				    			<li>
+				    				The first thing I needed to look up was spacing and styling for my webpage. Originally I didn't plan to use much, but I came across this post: <a href="https://stackoverflow.com/questions/10052922/set-space-between-divs">Set space between divs</a> and used it.<br>
+				    				Latter though I ended up just using bootstrap
+				    			</li>
+				    			<li>
+				    				The next thing I needed to know for was how to change an attribute of an html element so that I could get the nice features I have on my post status page. I searched for quite a while on a good alternative but could not find one. Eventually I ended up just creating my own post on stackoverflow and asking how I could go about it. The post can be found here and I was happy to find out it had been answered so quickly: 
+				    				<a href="https://stackoverflow.com/questions/55411044/how-can-i-change-the-class-tag-of-an-html-element-using-php-when-i-click-an-inpu/55411209#55411209">How can I change the class tag of an HTML element using PHP when I click an input</a>
+				    			</li>
+				    			<li>
+				    				After that I had some issue with pattern matching so found this post to be quite useful: <a href="https://stackoverflow.com/questions/7753365/php-preg-match-only-allow-alphanumeric-strings-and-characters">PHP preg_match - only allow alphanumeric strings and -_ characters</a>
+				    			</li>
+				    			<li>
+				    				I also then wanted to get the date input element to show the current date and found this post quite helpful: <a href="https://stackoverflow.com/questions/6982692/html5-input-type-date-default-value-to-today">HTML5 Input Type Date - Default value to Today?</a>
+				    			</li>
+				    			<li>
+				    				I also, of course, used boostrap which I refrenced multiple times throughout the construction of this website for styling and so on: <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a>
+				    			</li>
+				    			<li>
+				    				I also needed to get some nicely working back buttons so I used a combinitaiton of this post: <a href="https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link">How to create an html button that acts like a link</a> along with this post: <a href="https://stackoverflow.com/questions/3659782/code-for-back-button">Code for back button</a> to create my simple back buttons. Different code was needed whether I was using php or an html file.
+				    			</li>
+				    			<li>
+				    				I was also looking into hidden attributes to possibly making some cool transitions when clicking buttons but decided at the time against it: <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden">HTML hidden attribute</a>, <a href="https://www.w3schools.com/tags/att_global_hidden.asp">W3 Schools, Hidden Atrribute</a>
+				    			</li>
+				    			<li>
+				    				I was looking into how you find out if a checkbox has been checked and found this post: <a href="https://stackoverflow.com/questions/4554758/how-to-read-if-a-checkbox-is-checked-in-php">html - hHow to read if a checkbox is checked in PHP?</a>
+				    			</li>
+				    			<li>
+				    				I used W3 schools a significant amount for HTML, CSS, javascript, PHP and SQL. I extensively used it when I couldn't find other posts: <a href="https://www.w3schools.com/">W3schools.com</a>
+				    			</li>
+				    			<li>
+				    				I wanted to find a way to space out some buttons without using css and without and extra complication and I found this website that went over some spacing methods in HTML: <a href="https://www.lifewire.com/html-space-tag-3466504">How to Make Spaces in HTML</a>
+				    			</li>
+				    			<li>
+				    				I wanted to find an easy way to find keywords and so on with SQL whilst also being case in-sensitive. I ended up finding this post on how to do it: <a href="https://stackoverflow.com/questions/16082575/sql-ignore-case-while-searching-for-a-string">SQL - Ignore case while searching for a string</a>
+				    			</li>
+				    			<li>
+				    				I massively used this website to check my PHP code. Sometimes there was tiny little errors in a large amount of code like a missing semi-collon that I couldn't be fucked trying to find so I ended up using this amazing website that told me exactly where my errors where: <a href="https://phpcodechecker.com/">PHP Code Checker</a>
+				    			</li>
+				    			<li>
+				    				I also massively used this website for my regular expressions in the post status functionality. This website allows you to generate and test in a very easy way regular expressions<a href="https://regexr.com/"> Regexr</a>
+				    			</li>
+				    			<li>
+				    				For the search funtionality, I needed to search up a few things such as string position querying and substring querying. I found this post: <a href="https://www.elated.com/php-searching-strings/">PHP Searching Strings</a> and this post: <a href="https://stackoverflow.com/questions/18452024/finding-a-character-at-a-specific-position-of-a-string">Finding a character at a specific position of a string</a> for these problems
+				    			</li>
+				    		</ul>
+				    	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
